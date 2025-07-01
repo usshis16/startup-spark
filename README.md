@@ -1,10 +1,21 @@
 # 🚀 Startup Spark
 
-![Startup Spark – AI Startup Generator Banner](assets/startup-spark-banner.png)
 
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Spaces-yellow?logo=huggingface&logoColor=black)](https://huggingface.co/spaces/leana001/munna)
+[![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Flan-T5](https://img.shields.io/badge/Model-Flan--T5%20Large-blueviolet)](https://huggingface.co/google/flan-t5-large)
+[![GitHub Stars](https://img.shields.io/github/stars/usshis16/startup-spark?style=social)](https://github.com/usshis16/startup-spark/stargazers)
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen)](https://github.com/usshis16/startup-spark/issues)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+
+![Startup Spark – AI Startup Generator Banner](assets/startup-spark-banner.png)
 
 **Fuel your next venture with AI-validated startup ideas.**  
 *Built with Streamlit + Docker. Deployed on Hugging Face Spaces.*
+
+
 
 [![Hugging Face](https://img.shields.io/badge/Demo-Live%20App-blue)](https://huggingface.co/spaces/leana001/munna)
 [![Streamlit](https://img.shields.io/badge/UI-Built%20with%20Streamlit-ff4b4b)](https://streamlit.io/)
