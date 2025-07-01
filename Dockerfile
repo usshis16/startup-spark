@@ -18,3 +18,4 @@ EXPOSE 7860
 
 # Run Streamlit
 CMD ["streamlit", "run", "app.py", "--server.port=7860", "--server.address=0.0.0.0"]
+# trigger from Dockerfile
