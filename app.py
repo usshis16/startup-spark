@@ -27,3 +27,4 @@ if st.button("✨ Generate Ideas"):
 # trigger build
 
 <!-- build -->
+# ready to launch
