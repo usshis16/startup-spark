@@ -1,30 +1,40 @@
+
 import streamlit as st
-import requests
-import os
 
-# Secure token read from environment variable
-API_URL = "https://api-inference.huggingface.co/models/google/flan-t5-large"
-headers = {"Authorization": f"Bearer {os.getenv('HF_API_KEY')}"}
+st.set_page_config(
+    page_title="Startup Spark",
+    page_icon="✨",
+    layout="centered",
+    initial_sidebar_state="collapsed"
+)
 
-def query(prompt_text):
-    response = requests.post(API_URL, headers=headers, json={"inputs": prompt_text})
-    return response.json()
+st.markdown(
+    """
+    <style>
+        .main {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        footer {visibility: hidden;}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
-# Streamlit Interface
 st.title("🚀 Startup Spark")
-st.subheader("AI-powered startup idea generator")
+st.caption("Fuel your next venture with AI-validated startup ideas.")
 
-topic = st.text_input("🌍 Topic / Industry (e.g. education, mental health):")
-audience = st.text_input("👤 Target Audience (e.g. freelancers, busy parents):")
+st.markdown(
+    """
+    Welcome to **Startup Spark**—your co-founder in code.  
+    💡 Enter your target audience or challenge area.  
+    ⚙️ Let AI brainstorm breakthrough concepts.  
+    ✅ Validate ideas instantly with built-in startup logic.
 
-if st.button("✨ Generate Ideas"):
-    prompt = f"Generate 3 creative online startup ideas in {topic} for {audience}. Make them digital, AI-powered, and easy to launch."
-    with st.spinner("Thinking hard..."):
-        result = query(prompt)
-        ideas = result[0]['generated_text'] if isinstance(result, list) else str(result)
-        st.markdown("### 💡 Startup Ideas")
-        st.write(ideas)
-# trigger build
+    ---
+    """
+)
 
-<!-- build -->
-# ready to launch
+
+
+
