@@ -31,7 +31,9 @@ Startup Spark is an AI-powered idea generator for:
 - 👩‍🏫 Educators teaching innovation
 - 🧪 Builders prototyping fast, validated concepts
 
-Just enter a **topic** and **target audience**, and it returns 3 creative, launchable startup ideas—powered by prompt-engineered inference from Google’s Flan-T5 model.
+🔍 Generates startup ideas tailored to your topic and audience
+
+It makes your messaging sharper and more discoverable too—great for SEO and users who want results, fast.
 
 ---
 
