@@ -24,4 +24,6 @@ if st.button("✨ Generate Ideas"):
         ideas = result[0]['generated_text'] if isinstance(result, list) else str(result)
         st.markdown("### 💡 Startup Ideas")
         st.write(ideas)
+# trigger build
 
+<!-- build -->
