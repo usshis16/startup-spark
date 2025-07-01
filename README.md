@@ -1,5 +1,8 @@
 # 🚀 Startup Spark
 
+![Startup Spark – AI Startup Generator Banner](assets/startup-spark-banner.png)
+
+
 **Fuel your next venture with AI-validated startup ideas.**  
 *Built with Streamlit + Docker. Deployed on Hugging Face Spaces.*
 
