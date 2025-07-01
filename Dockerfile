@@ -1,40 +1,29 @@
-# Use an official Streamlit image
+# Use an official Python base image
 FROM python:3.10-slim
 
 # Set working directory
 WORKDIR /app
 
-# Copy files
+# Copy all files into the container
 COPY . /app
 
-# Install dependencies
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Set Streamlit environment variable to suppress config warning
+# Create a non-root user to avoid permission issues
+RUN useradd -m -u 1000 appuser
+USER appuser
+
+# Set environment variables
+ENV HOME="/home/appuser"
+ENV STREAMLIT_CONFIG_DIR="$HOME/.streamlit"
 ENV STREAMLIT_DISABLE_WELCOME=true
 
-# Expose the port Streamlit runs on
+# Create a writable .streamlit config directory
+RUN mkdir -p "$STREAMLIT_CONFIG_DIR"
+
+# Expose the port Streamlit will use
 EXPOSE 7860
 
-# Run Streamlit
-# Create a writable .streamlit config directory
-RUN mkdir -p /home/user/.streamlit
-ENV HOME="/home/user"
-ENV STREAMLIT_CONFIG_DIR="/home/user/.streamlit"
-
-
+# Launch the app using Streamlit
 CMD ["streamlit", "run", "app.py", "--server.port=7860", "--server.address=0.0.0.0"]
-# trigger from Dockerfile
-# final trigger
-# final launch nudge 🚀
-# Expose the port Streamlit runs on
-EXPOSE 7860
-
-# Create a writable .streamlit config directory
-RUN mkdir -p /home/user/.streamlit
-ENV HOME="/home/user"
-ENV STREAMLIT_CONFIG_DIR="/home/user/.streamlit"
-
-# Run Streamlit
-CMD ["streamlit", "run", "app.py", "--server.port=7860", "--server.address=0.0.0.0"]
-
